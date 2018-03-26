@@ -50,6 +50,7 @@ namespace Microsoft.VisualStudio.TestPlatform.CommunicationUtilities
                 {
                     EqtTrace.Verbose("LengthPrefixCommunicationChannel.Send: start write data :{0}", data);
                     this.writer.Write(data);
+                    EqtTrace.Verbose("LengthPrefixCommunicationChannel.Send: written data :{0}, start flush", data);
                     this.writer.Flush();
                     EqtTrace.Verbose("LengthPrefixCommunicationChannel.Send: wrote data :{0}", data);
                 }
